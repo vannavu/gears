@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 0;
+}
+
+:root {
+  --star_width: 35px;
+}
+
+body {
+  background: black;
+  background-image: url(../images/start.svg);
+  background-size: var(--star_width);
+  padding: var(--star_width);
+}
+
+.glyph {
+  position: relative;
+  height: calc(var(--star_width) * 7);
+  opacity: 0;
+  display: inline-block;
+}
+
+#A.glyph {
+  width: calc(var(--star_width) * 6);
+}
+
+#B.glyph {
+  width: calc(var(--star_width) * 5);
+}
+
+#C.glyph {
+  width: calc(var(--star_width) * 7);
+}
+
+@keyframes rotate360 {
+  to {transform: rotate(360deg);}
+}
+
+.r1, .r2, .r3, .r4, .r5, .r6, .r7, .c1, .c2, .c3, .c4, .c5, .c6 {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  width: var(--star_width);
+  height: var(--star_width);
+  border-radius: var(--star_width);
+  background-color: black;
+  background-image: url(../images/star.svg);
+  animation: 20s rotate360 infinite linear;
+}
+
+.r1 {
+  top: 0;
+}
+
+.r2 {
+  top: var(--star_width);
+}
+
+.r3 {
+  top: calc(2 * var(--star_width));
+}
+
+.r4 {
+  top: calc(3 * var(--star_width));
+}
+
+.r5 {
+  top: calc(4 * var(--star_width));
+}
+
+.r6 {
+  top: calc(5 * var(--star_width));
+}
+
+.r7 {
+  top: calc(6 * var(--star_width));
+}
+
+.c1 {
+  left: 0;
+}
+
+.c2 {
+  left: var(--star_width);
+}
+
+.c3 {
+  left: calc(2 * var(--star_width));
+}
+
+.c4 {
+  left: calc(3 * var(--star_width));
+}
+
+.c5 {
+  left: calc(4 * var(--star_width));
+}
+
+.c6 {
+  left: calc(5 * var(--star_width));
+}
