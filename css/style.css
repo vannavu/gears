@@ -6,7 +6,7 @@
 }
 
 :root {
-  --star_width: 35px;
+  --star_width: 30px;
 }
 
 body {
@@ -21,25 +21,38 @@ body {
   height: calc(var(--star_width) * 7);
   opacity: 0;
   display: inline-block;
+  margin-bottom: var(--star_width);
 }
 
-#A.glyph {
-  width: calc(var(--star_width) * 6);
+.exclam {
+  width: calc(var(--star_width) * 3);
 }
 
-#B.glyph {
+.I {
+  width: calc(var(--star_width) * 4);
+}
+
+.B, .E, .F, .J, .K, .L, .P, .S, .U, .V, .X, .Y, .Z {
   width: calc(var(--star_width) * 5);
 }
 
-#C.glyph {
+.A, .D, .H, .N, .R, .T {
+  width: calc(var(--star_width) * 6);
+}
+
+.C, .G {
   width: calc(var(--star_width) * 7);
+}
+
+.M, .O, .Q, .W {
+  width: calc(var(--star_width) * 8);
 }
 
 @keyframes rotate360 {
   to {transform: rotate(360deg);}
 }
 
-.r1, .r2, .r3, .r4, .r5, .r6, .r7, .c1, .c2, .c3, .c4, .c5, .c6 {
+.r1, .r2, .r3, .r4, .r5, .r6, .r7, .c1, .c2, .c3, .c4, .c5, .c6, .c7{
   cursor: pointer;
   display: inline-block;
   position: absolute;
@@ -47,8 +60,8 @@ body {
   height: var(--star_width);
   border-radius: var(--star_width);
   background-color: black;
-  background-image: url(../images/star.svg);
-  animation: 20s rotate360 infinite linear;
+  background-image: url(../images/star_12.svg);
+  animation: 10s rotate360 infinite linear;
 }
 
 .r1 {
@@ -101,4 +114,8 @@ body {
 
 .c6 {
   left: calc(5 * var(--star_width));
+}
+
+.c7 {
+  left: calc(6 * var(--star_width));
 }
